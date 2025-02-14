@@ -14,6 +14,9 @@ importers:
       '@types/mocha':
         specifier: ^10.0.10
         version: 10.0.10
+      c8:
+        specifier: ^10.1.3
+        version: 10.1.3
       chai:
         specifier: ^5.1.2
         version: 5.1.2
@@ -101,6 +104,10 @@ packages:
   '@babel/types@7.26.8':
     resolution: {integrity: sha512-eUuWapzEGWFEpHFxgEaBG8e3n6S8L3MSu0oda755rOfabWPnh0Our1AozNFVUxGFIhbKgd1ksprsoDGMinTOTA==}
     engines: {node: '>=6.9.0'}
+
+  '@bcoe/v8-coverage@1.0.2':
+    resolution: {integrity: sha512-6zABk/ECA/QYSCQ1NGiVwwbQerUCZ+TQbp64Q3AgmfNvurHH0j8TtXa1qbShXA6qqkpAj4V5W8pP6mLe1mcMqA==}
+    engines: {node: '>=18'}
 
   '@esbuild/aix-ppc64@0.23.1':
     resolution: {integrity: sha512-6VhYk1diRqrhBAqpJEdjASR/+WVRtfjpqKuNw11cLiaWpAT/Uu+nokB+UJnevzy/P9C/ty6AOe0dwueMrGh/iQ==}
@@ -289,6 +296,9 @@ packages:
   '@types/gensync@1.0.4':
     resolution: {integrity: sha512-C3YYeRQWp2fmq9OryX+FoDy8nXS6scQ7dPptD8LnFDAUNcKWJjXQKDNJD3HVm+kOUsXhTOkpi69vI4EuAr95bA==}
 
+  '@types/istanbul-lib-coverage@2.0.6':
+    resolution: {integrity: sha512-2QF/t/auWm0lsy8XtKVPG19v3sSOQlJe/YHZgfjb/KBBHOGSV+J2q/S671rcq9uTBrLAXmZpqJiaQbMT+zNU1w==}
+
   '@types/mocha@10.0.10':
     resolution: {integrity: sha512-xPyYSz1cMPnJQhl0CLMH68j3gprKZaTjG3s5Vi+fDgx+uhG9NOXwbVt52eFS8ECyXhyKcjDLCBEqBExKuiZb7Q==}
 
@@ -361,6 +371,16 @@ packages:
     resolution: {integrity: sha512-KDi1Ny1gSePi1vm0q4oxSF8b4DR44GF4BbmS2YdhPLOEqd8pDviZOGH/GsmRwoWJ2+5Lr085X7naowMwKHDG1A==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
+
+  c8@10.1.3:
+    resolution: {integrity: sha512-LvcyrOAaOnrrlMpW22n690PUvxiq4Uf9WMhQwNJ9vgagkL/ph1+D4uvjvDA5XCbykrc0sx+ay6pVi9YZ1GnhyA==}
+    engines: {node: '>=18'}
+    hasBin: true
+    peerDependencies:
+      monocart-coverage-reports: ^2
+    peerDependenciesMeta:
+      monocart-coverage-reports:
+        optional: true
 
   caching-transform@4.0.0:
     resolution: {integrity: sha512-kpqOvwXnjjN44D89K5ccQC+RUrsy7jB/XLlRrx0D7/2HNcTPqzsb6XgYoErwko6QsV184CA2YgS1fxDiiDZMWA==}
@@ -936,6 +956,10 @@ packages:
     resolution: {integrity: sha512-cAGWPIyOHU6zlmg88jwm7VRyXnMN7iV68OGAbYDk/Mh/xC/pzVPlQtY6ngoIH/5/tciuhGfvESU8GrHrcxD56w==}
     engines: {node: '>=8'}
 
+  test-exclude@7.0.1:
+    resolution: {integrity: sha512-pFYqmTw68LXVjeWJMST4+borgQP2AyMNbg1BpZh9LbyhUeNkeaPF9gzfPGUAnSMV3qPYdWUwDIjjCLiSDOl7vg==}
+    engines: {node: '>=18'}
+
   to-regex-range@5.0.1:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
@@ -970,6 +994,10 @@ packages:
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
     hasBin: true
+
+  v8-to-istanbul@9.3.0:
+    resolution: {integrity: sha512-kiGUalWN+rgBJ/1OHZsBtU4rXZOfj/7rKQxULKlIzwzQSvMJUUNgPwJEEh7gU6xEVxC0ahoOBvN2YI8GH6FNgA==}
+    engines: {node: '>=10.12.0'}
 
   which-module@2.0.1:
     resolution: {integrity: sha512-iBdZ57RDvnOR9AGBhML2vFZf7h8vmBjhoaZqODJBFWHVtKkDmKuHai3cx5PgVMrX5YDNp27AofYbAwctSS+vhQ==}
@@ -1140,6 +1168,8 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
+  '@bcoe/v8-coverage@1.0.2': {}
+
   '@esbuild/aix-ppc64@0.23.1':
     optional: true
 
@@ -1259,6 +1289,8 @@ snapshots:
 
   '@types/gensync@1.0.4': {}
 
+  '@types/istanbul-lib-coverage@2.0.6': {}
+
   '@types/mocha@10.0.10': {}
 
   aggregate-error@3.1.0:
@@ -1322,6 +1354,20 @@ snapshots:
       electron-to-chromium: 1.5.100
       node-releases: 2.0.19
       update-browserslist-db: 1.1.2(browserslist@4.24.4)
+
+  c8@10.1.3:
+    dependencies:
+      '@bcoe/v8-coverage': 1.0.2
+      '@istanbuljs/schema': 0.1.3
+      find-up: 5.0.0
+      foreground-child: 3.3.0
+      istanbul-lib-coverage: 3.2.2
+      istanbul-lib-report: 3.0.1
+      istanbul-reports: 3.1.7
+      test-exclude: 7.0.1
+      v8-to-istanbul: 9.3.0
+      yargs: 17.7.2
+      yargs-parser: 21.1.1
 
   caching-transform@4.0.0:
     dependencies:
@@ -1913,6 +1959,12 @@ snapshots:
       glob: 7.2.3
       minimatch: 3.1.2
 
+  test-exclude@7.0.1:
+    dependencies:
+      '@istanbuljs/schema': 0.1.3
+      glob: 10.4.5
+      minimatch: 9.0.5
+
   to-regex-range@5.0.1:
     dependencies:
       is-number: 7.0.0
@@ -1941,6 +1993,12 @@ snapshots:
       picocolors: 1.1.1
 
   uuid@8.3.2: {}
+
+  v8-to-istanbul@9.3.0:
+    dependencies:
+      '@jridgewell/trace-mapping': 0.3.25
+      '@types/istanbul-lib-coverage': 2.0.6
+      convert-source-map: 2.0.0
 
   which-module@2.0.1: {}
 
